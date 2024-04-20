@@ -7,6 +7,8 @@ import Login from "../pages/login";
 import ForttenPassword from "../pages/ForgottenPassword";
 import SignUp from "../pages/Signup";
 import OTPPage from "../pages/OTP";
+import Home from "../pages/Home";
+import Main from "../pages/Main";
 
 const MainBAR = ({ children }) => {
   return (
@@ -57,6 +59,15 @@ const MainRoute = () => {
           ],
         },
       ],
+    },
+    // main app
+    {
+      path: "/app",
+      element: <Home />,
+    },
+    {
+      path: "/main",
+      element: <Main />,
     },
   ]);
 
