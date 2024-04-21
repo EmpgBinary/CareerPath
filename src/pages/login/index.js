@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Textfield from "../../Component/Textfield";
+import { useNavigate } from "react-router-dom";
 import Button from "../../Component/Button";
 
 const LoginPage = () => {
+  const navigate = useNavigate()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isBtnDisabled, setIsBtnDisabled] = useState(false);
 
   const handleLogin = () => {
     console.log("Logging in with email:", email, "and password:", password);
+    navigate('/app')
   };
 
   return (
