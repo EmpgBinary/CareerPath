@@ -19,8 +19,8 @@ function TopNav() {
 
 function SideNav() {
   return (
-    <aside className="w-fit md:w-full md:w-1/4 h-[99vh] relative border rounded-xl rounded-t-none rounded-tl-none">
-      <div className="p-1 h-fit w-fit md:mx-auto mx-5 border rounded-xl md:p-3 md:h-16  mt-2 text-xl md:text-3xl font-bold">
+    <aside className="w-fit md:w-1/4 h-[99vh] relative border rounded-xl rounded-t-none rounded-tl-none">
+      <div className="p-1 h-fit w-fit mx-auto md:mx-5 border rounded-xl md:p-3 md:h-16  mt-2 text-xl md:text-3xl font-bold">
         {window.screen.availWidth >= 800 ? "Career Path" : "Cp"}
       </div>
       <nav className="lg:mt-6 mt-8 border rounded-xl mx-5 py-3">
