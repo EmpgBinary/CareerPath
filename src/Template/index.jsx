@@ -3,7 +3,7 @@ import { PiUserBold, PiHouseLineBold, PiAppWindowBold } from "react-icons/pi";
 
 function TopNav() {
   return (
-    <nav className="w-full md:w-3/4 z-50 border rounded-tr-xl flex justify-end rounded-br-xl p-2 fixed right-0">
+    <nav className="w-full md:w-3/4 z-50 border rounded-tr-xl flex justify-end rounded-br-xl p-2 absolute top-0 right-0">
       <aside className="md:border rounded md:p-1 mr-5 relative view-profile md:bg-green-100 ">
         <div className="w-[50px] h-[50px] p-2 rounded-full border">
           <PiUserBold className="text-3xl" />
@@ -19,11 +19,11 @@ function TopNav() {
 
 function SideNav() {
   return (
-    <aside className="w-fit md:w-1/4 h-[99vh] relative border rounded-xl rounded-t-none rounded-tl-none">
+    <aside className="w-fit md:w-1/4 h-[99vh] absolute border rounded-xl rounded-t-none rounded-tl-none">
       <div className="p-1 h-fit w-fit mx-auto md:mx-5 border rounded-xl md:p-3 md:h-16  mt-2 text-xl md:text-3xl font-bold">
-        {window.screen.availWidth >= 800 ? "Career Path" : "Cp"}
+        {window.screen.availWidth >= 807 ? "Career Path" : "Cp"}
       </div>
-      <nav className="lg:mt-6 mt-8 border rounded-xl mx-5 py-3">
+      <nav className="lg:mt-6 mt-8 border rounded-xl mx-1 sm:mx-5 py-3">
         <NavLink to="/app">
           <div className="p-3 flex items-center">
             <PiHouseLineBold />
@@ -42,7 +42,7 @@ function SideNav() {
         </NavLink>
       </nav>
       <section className="text-sm absolute bottom-3 w-full mx-auto  flex justify-evenly">
-        {window.screen.availWidth >= 800 && (
+        {window.screen.availWidth >= 808 && (
           <>
             Developer:
             <p className="text-slate-400">Twitter</p>
@@ -57,14 +57,14 @@ function SideNav() {
 
 export default function DashBoardLayout({ children }) {
   return (
-    <section>
+    <section className="relative">
       <TopNav />
       <SideNav />
-      <div className="fixed top-[95px] -right-5 md:w-3/4 sm:w-[85%] w-3/4">
-        <div className="border rounded-xl  border-r-0 h-[83vh] p-5  overflow-y-scroll">
+      <div className="absolute ml-3 top-[90px] right-0 md:w-[73%] sm:w-[85%] w-[80%]">
+        <div className="border rounded-xl  border-r-0 h-[83vh] p-5  overflow-y-auto">
           {children ? children : <Outlet />}
         </div>
-        <footer className="m-1 text-gray-400 text-center">
+        <footer className=" text-gray-400 text-center">
           <small>Copyright 2024</small>
         </footer>
       </div>
