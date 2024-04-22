@@ -8,8 +8,8 @@ export default function Unauthenticated() {
       <div className="h-full lg:w-1/2">
         <Outlet />
       </div>
-      <div className="w-full h-full lg:w-1/2 bg-white-500 flex justify-between items-center p-6">
-        <img src={Path} className="w-full h-full" object-cover alt=""/>
+      <div className="w-full h-full lg:w-1/2 bg-white-500 md:flex justify-between items-center p-6 hidden">
+        <img src={Path} className="w-full h-full" object-cover alt="" />
       </div>
     </div>
   );
