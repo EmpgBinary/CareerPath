@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-export default function Textfield({ label, value, onChange, type }) {
+export default function Textfield({ label, value, onChange, type, className }) {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="mb-4 ">
+    <div className={`mb-4 ${className}`}>
       <label htmlFor="email" className="block text-gray-600 capitalize">
         {label}
       </label>

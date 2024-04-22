@@ -1,7 +1,8 @@
-import { Outlet, Link, NavLink } from "react-router-dom";
+import { Outlet, Link, NavLink, useNavigate } from "react-router-dom";
 import { PiUserBold, PiHouseLineBold, PiAppWindowBold } from "react-icons/pi";
 
 function TopNav() {
+  const navigate = useNavigate();
   return (
     <nav className="w-full md:w-3/4 z-50 border rounded-tr-xl flex justify-end rounded-br-xl p-2 absolute top-0 right-0">
       <aside className="md:border rounded md:p-1 mr-5 relative view-profile md:bg-green-100 ">
@@ -10,7 +11,9 @@ function TopNav() {
         </div>
         <div className="absolute w-[150px] right-0 mt-2 hidden action-view p-1 bg-green-100">
           <Link className="p-2">View Profile</Link>
-          <section className="p-2 cursor-default">Logout</section>
+          <section className="p-2 cursor-default" onClick={() => navigate("/")}>
+            Logout
+          </section>
         </div>
       </aside>
     </nav>

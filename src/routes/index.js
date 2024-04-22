@@ -70,10 +70,6 @@ const MainRoute = () => {
       path: "/main",
       element: <Main />,
     },
-    {
-      path: "course-checker",
-      element: <Checker />,
-    },
   ]);
 
   return <RouterProvider router={routes} />;

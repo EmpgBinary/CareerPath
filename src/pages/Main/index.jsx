@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DashBoardLayout from "../../Template";
 import { courses as allCourses } from "../../fileStorage/data";
 import Checker from "../Checker";
@@ -28,6 +28,7 @@ export default function Main({ children }) {
     setCourse(pick);
     setCategory(from);
     setOpenCheckerModal(true);
+    console.log(openCheckerModal);
   }
 
   return (
@@ -68,8 +69,8 @@ export default function Main({ children }) {
         </article>
       </DashBoardLayout>
       <Checker
-        openCheckerModal={openCheckerModal}
-        setOpenCheckerModal={() => setOpenCheckerModal(!openCheckerModal)}
+        modal={openCheckerModal}
+        setModal={() => setOpenCheckerModal(!openCheckerModal)}
         course={course}
         category={category}
       />
