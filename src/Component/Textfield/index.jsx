@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Textfield({ label, value, onChange, type, className }) {
+export default function Textfield({ label, value, onChange, type, className, placeholder }) {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -15,6 +15,7 @@ export default function Textfield({ label, value, onChange, type, className }) {
           value={value}
           onChange={onChange}
           required
+          placeholder={placeholder}
         />
         {type === "password" && (
           <div onClick={() => setShowPassword(!showPassword)} className="">
@@ -26,4 +27,13 @@ export default function Textfield({ label, value, onChange, type, className }) {
   );
 }
 
-// PROPS
+export function MultiLineTextField({styles, label, desc}){
+  return (
+    <div className={`mx-2`}>
+        <label className="block text-gray-600 capitalize">
+        {label}
+      </label>
+      <textarea name="" id="" placeholder={desc} rows="5" className={`p-3 w-full border-2 rounded my-2 ${styles} italic`}></textarea>
+    </div>
+  )
+}

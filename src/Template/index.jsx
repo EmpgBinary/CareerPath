@@ -23,36 +23,31 @@ function TopNav() {
 function SideNav() {
   return (
     <aside className="w-fit md:w-1/4 h-[99vh] absolute border rounded-xl rounded-t-none rounded-tl-none">
-      <div className="p-1 h-fit w-fit mx-auto md:mx-5 border rounded-xl md:p-3 md:h-16  mt-2 text-xl md:text-3xl font-bold">
-        {window.screen.availWidth >= 807 ? "Career Path" : "Cp"}
+      <div className="hidden sm:block p-1 h-fit w-fit mx-auto md:mx-5 border rounded-xl md:p-3 md:h-16  mt-2 text-xl md:text-3xl font-bold">
+        Career Path
+      </div>
+      <div className="sm:hidden p-1 h-fit w-fit mx-auto md:mx-5 border rounded-xl md:p-3 md:h-16  mt-2 text-xl md:text-3xl font-bold">
+        Cp
       </div>
       <nav className="lg:mt-6 mt-8 border rounded-xl mx-1 sm:mx-5 py-3">
         <NavLink to="/app">
           <div className="p-3 flex items-center">
             <PiHouseLineBold />
-            {window.screen.availWidth >= 768 && (
-              <span className="ml-2">Home</span>
-            )}
+              <span className="ml-2 hidden sm:inline-block">Home</span>
           </div>
         </NavLink>
         <NavLink to="/main">
           <div className="p-3 flex items-center">
             <PiAppWindowBold />
-            {window.screen.availWidth >= 768 && (
-              <span className="ml-2">Main</span>
-            )}
+              <span className="ml-2 hidden sm:inline-block">Main</span>
           </div>
         </NavLink>
       </nav>
-      <section className="text-sm absolute bottom-3 w-full mx-auto  flex justify-evenly">
-        {window.screen.availWidth >= 808 && (
-          <>
+      <section className="text-sm absolute bottom-3 w-full mx-auto  md:flex justify-evenly hidden">
             Developer:
             <p className="text-slate-400">Twitter</p>
             <p className="text-slate-400">LinkedIn</p>
             <p className="text-slate-400">Github</p>
-          </>
-        )}
       </section>
     </aside>
   );

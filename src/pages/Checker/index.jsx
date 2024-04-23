@@ -1,6 +1,6 @@
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { Form } from "react-router-dom";
-import Textfield from "../../Component/Textfield";
+import Textfield, {MultiLineTextField} from "../../Component/Textfield";
 import Button from "../../Component/Button";
 import SelectCase from "../../Component/Select";
 import { useState } from "react";
@@ -103,6 +103,8 @@ export default function Checker({ modal, setModal, course, category }) {
                       />
                     </div>
                   ))}
+                      <Textfield label={"Jamb Score"} placeholder={'Range: from 0 - 400'} className="w-full mx-2" />
+                      <MultiLineTextField styles={'outline-none'} label={'Additional Comment - Help our algorithm.'} desc={'Expeciting informations like passion for a course, hobbies e.t.c, Leave empty if you dont want to share.\nNot more than 200 words'}/>
                 <div className="flex my-2">
                   <button
                     type="button"

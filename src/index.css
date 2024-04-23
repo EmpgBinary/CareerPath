@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .active {
-    @apply border-l-4 border-l-green-500 flex  text-red-400
+    @apply border-l-4 border-l-green-500 flex text-red-400
 }
 
-.view-profile:hover .action-view{
+.view-profile:hover .action-view {
     display: block;
 }
